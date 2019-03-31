@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="482.0" prefWidth="707.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AppController">
+   <children>
+      <Pane layoutX="14.0" layoutY="14.0" prefHeight="46.0" prefWidth="650.0">
+         <children>
+            <Label layoutX="130.0" layoutY="15.0" text="XML to SRT Converter" />
+         </children>
+      </Pane>
+      <TabPane layoutX="22.0" layoutY="68.0" prefHeight="373.0" prefWidth="664.0" tabMinHeight="30.0" tabMinWidth="50.0">
+         <tabs>
+            <Tab closable="false" text="Main">
+               <content>
+                  <GridPane prefHeight="279.0" prefWidth="558.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.0" minWidth="10.0" prefWidth="395.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="274.0" minWidth="10.0" prefWidth="163.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="122.0" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="111.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="122.0" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="153.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TextField fx:id="textb">
+                           <GridPane.margin>
+                              <Insets left="4.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <Button fx:id="fileb" mnemonicParsing="false" onAction="#openFile" prefHeight="40.0" prefWidth="120.0" text="Open File" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <TextField fx:id="textb2" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="4.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <Button fx:id="fileb2" mnemonicParsing="false" onAction="#saveFile" prefHeight="40.0" prefWidth="120.0" text="Save File" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <AnchorPane prefHeight="46.0" prefWidth="417.0" GridPane.rowIndex="1">
+                           <children>
+                              <Label fx:id="lab_opened" layoutX="-1.0" layoutY="15.0" prefHeight="60.0" prefWidth="535.0" textFill="#fb2d2d" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="-144.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                           <children>
+                              <Label fx:id="lab_saved" layoutX="14.0" layoutY="6.0" prefHeight="61.0" prefWidth="535.0" textFill="#fb2d2d" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="-144.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </GridPane>
+               </content>
+            </Tab>
+            <Tab closable="false" text="Help">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txt_E" layoutX="98.0" layoutY="101.0" prefHeight="67.0" prefWidth="357.0" />
+                        <Button fx:id="btn_E" layoutX="202.0" layoutY="201.0" mnemonicParsing="false" onAction="#doButton" text="Button" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab closable="false" text="About">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
